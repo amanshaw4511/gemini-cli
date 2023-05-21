@@ -68,6 +68,8 @@ if __name__ == "__main__" :
 
 
     token = environ.get('BARD_TOKEN')
+    if not token or token.strip() == "" :
+        print("api token not found")
     bard = Bard(token = token)
 
 
