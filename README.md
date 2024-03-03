@@ -17,10 +17,11 @@ This project provides a Python-based command-line interface (CLI) for interactin
 1. **Prerequisites:**
     * Python 3.x ([https://www.python.org/downloads/](https://www.python.org/downloads/))
     * `rich` library: `pip install rich`
+    * `google-generativeai` library: `pip install rich google-generativeai`
 2. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/your-username/gemini-cli.git
+   git clone https://github.com/amanshaw4511/gemini-cli.git
    ```
 
 3. **Set up environment variable:**
@@ -58,8 +59,3 @@ We welcome contributions to this project! Please refer to the CONTRIBUTING.md fi
 ### License
 
 This project is licensed under the Apache License 2.0. See the LICENSE file for details.
-
-**Note:**
-
-* Replace `your-username` with your actual GitHub username in the cloning command.
-* This is a basic outline for a README file. You may want to add additional sections such as "Requirements", "Examples", "Troubleshooting", etc., depending on the complexity of your project.
