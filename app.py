@@ -9,10 +9,14 @@ from rich.markdown import Markdown
 import google.generativeai as genai
 
 
-def mark_print(text):
+def mark_print(text_stream):
     console = Console()
-    markdown = Markdown(text)
-    console.print(markdown)
+    for chunk in text_stream:
+        text = chunk.text
+        text = text.replace('•', '  *')
+        markdown = Markdown(text)
+        console.print(markdown)
+        # print(chunk)
 
 
 # def to_markdown(text):
@@ -29,8 +33,5 @@ if __name__ == '__main__':
     model = get_model()
     prompt = ' '.join(argv[1:])
     print(prompt)
-    resp = model.generate_content(prompt)
-    mark_print(resp.text)
-
-
-
+    resp = model.generate_content(prompt, stream=True)
+    mark_print(resp)
