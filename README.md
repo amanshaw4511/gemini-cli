@@ -18,6 +18,7 @@ This project provides a Python-based command-line interface (CLI) for interactin
     * Python 3.x ([https://www.python.org/downloads/](https://www.python.org/downloads/))
     * `rich` library: `pip install rich`
     * `google-generativeai` library: `pip install rich google-generativeai`
+    * `click` library: `pip install click`
 2. **Clone the repository:**
 
    ```bash
@@ -39,7 +40,22 @@ This project provides a Python-based command-line interface (CLI) for interactin
 2. **Run the chat interface:**
 
    ```bash
-   python app.py chat
+   $ python app.py chat
+   Welcome! You are chatting with the models/gemini-pro model.
+   Type 'quit' or 'exit' to end the conversation.
+
+   > tell 5 animals name
+
+   1 Dog
+   2 Cat
+   3 Elephant
+   4 Lion
+
+   5 Bird
+   > which of these are pet animal
+
+   ° Dog
+   ° Cat
    ```
 
    You can now interact with the model by entering prompts and receiving responses.
@@ -47,7 +63,15 @@ This project provides a Python-based command-line interface (CLI) for interactin
 3. **Generate text:**
 
    ```bash
-   python app.py tell "Write a poem about a robot cat."
+   $ python app.py tell Write a small poem about a robot cat.
+   Metallic fur, emerald eyes so bright, A robotic feline, a marvel in
+   sight. Sensors twitch, scanning the room with care, A mechanical companion, beyond compare.
+
+   Purring softly, a digital hum, Its tail
+   swishes, a synthetic sum. It leaps and bounds with agile grace, A futuristic friend, in any space.
+
+   Though not of flesh, its love knows no end, A robotic cat, a bond that transcends. In its circuits, a heart of gold, A mechanical companion, a story
+   to be told.
    ```
 
    This will generate text based on the provided prompt and display it in a formatted manner.
